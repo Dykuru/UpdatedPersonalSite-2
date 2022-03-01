@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="gfl.css" rel="stylesheet" type="text/css" />
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+	</script>
+	<![endif]-->
+	<script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+	<div id="container">
+	<header>
+	<h1>GIRLS FRONTLINE</h1>
+	</header>
+
+	<div id="nav">
+	<ul>
+	<li><a href="index.html">Index</a></li>
+	<li><a href="characters.html">Characters</a></li>
+	<li><a href="developers.html">Developers</a></li>
+	<li><a href="encyclopedia.html">Encyclopedia</a></li>
+	<li><a href="websecurity.html">Web Security</a></li>
+	<li><a href="time.html">Time</a></li>
+	</ul>
+	</div>
+
+	<div id="content">
+	<main>
+	<h2>Encyclopedia</h2>
+	<p>From Equipment, to T-DOLL types, and Stats.</p>
+	<dl>
+		<table>
+			<tr>
+				<th>Placeholder</th>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<th>Placeholder</th>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<th>Placeholder</th>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<th>Placeholder</th>
+				<td>Placeholder</td>
+			</tr>
+		</table>
+
+      		<h4>DOLL to Core Calculator</h4>
+		<table>
+		<article>
+		<form>
+
+			<tr>
+         		<td><input type="checkbox" id="item1" value="" /></td>
+         		<th><label for="item1">1 Star Special DOLL(5 cores)</label></th>
+			</tr>	
+		
+			<tr>
+         		<td><input type="checkbox" id="item2" value="0" /></td>
+         		<th><label for="item2">2 Star DOLL(0 cores)</label></th>
+			</tr>
+
+			<tr>
+         		<td><input type="checkbox" id="item3" value="1" /></td>
+         		<th><label for="item3">3 Star DOLL (1 core)</label></th>
+			</tr>
+
+			<tr>
+         		<td><input type="checkbox" id="item4" value="3" /></td>
+         		<th><label for="item4">4 Star DOLL (3 cores)</label></th>
+			</tr>
+
+			<tr>
+         		<td><input type="checkbox" id="item5" value="5" /></td>
+         		<th><label for="item5">5 Star DOLL (5 cores)</label></th>
+			</tr>
+			
+			<tr>
+         		<td><input type="submit" id="submit" value="Submit" /></td>
+			</tr>
+
+		</article>
+		</form>
+		</table>
+   		<script>
+			function calcTotal() {
+				var itemTotal = 0;
+				var item1 = document.getElementById("item1");
+				var item2 = document.getElementById("item2");
+				var item3 = document.getElementById("item3");
+				var item4 = document.getElementById("item4");
+				var item5 = document.getElementById("item5");
+				(item1.checked) ? (itemTotal += 5) : (itemTotal +=0);
+				(item2.checked) ? (itemTotal += 0) : (itemTotal +=0);
+				(item3.checked) ? (itemTotal += 1) : (itemTotal +=0);
+				(item4.checked) ? (itemTotal += 3) : (itemTotal +=0);
+				(item5.checked) ? (itemTotal += 5) : (itemTotal +=0);
+				itemTotal *= 100;
+				var orderTotal = 
+					itemTotal / 100;
+				alert("The total cores you will recieve from dismantling these DOLLs is " + orderTotal);
+			}
+			document.getElementById("submit").addEventListener("click", calcTotal, false);	
+   		</script>
+
+</div></body>
+</html>

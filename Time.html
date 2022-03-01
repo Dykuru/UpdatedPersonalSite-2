@@ -1,0 +1,86 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="gfl.css" rel="stylesheet" type="text/css" />
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+	</script>
+	<![endif]-->
+	<script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+	<div id="container">
+	<header>
+	<h1>GIRLS FRONTLINE</h1>
+	</header>
+
+	<div id="nav">
+	<ul>
+	<li><a href="index.html">Index</a></li>
+	<li><a href="characters.html">Characters</a></li>
+	<li><a href="developers.html">Developers</a></li>
+	<li><a href="encyclopedia.html">Encyclopedia</a></li>
+	<li><a href="websecurity.html">Web Security</a></li>
+	<li><a href="time.html">Time</a></li>
+	</ul>
+	</div>
+	
+   <article>
+      <h2>Elapsed Time</h2>
+      <form>
+          <fieldset>
+            <label for="mValue">
+              Enter a number
+            </label>
+            <input type="number" id="value" />
+          </fieldset>
+          <fieldset>
+            <button type="button" id="convertButton">Calculate square root</button>
+          </fieldset>
+          <fieldset>
+             <p>Square root</p>
+            <p id="sqRoot"></p>
+          </fieldset>
+     </form>
+   </article>
+   <script>
+	var valueElement = document.getElementById("value");
+	var resultElement = document.getElementById("sqRoot");
+	
+	function convert(){
+	   var root = Math.sqrt(valueElement.value);
+
+	      resultElement.innerHTML = root.toFixed(2);
+	}
+
+	function createEventListener(){
+	   var submitButton = document.getElementById("convertButton");
+	
+	      if (submitButton.addEventListener){
+		submitButton.addEventListener("click",convert, false);
+	
+	      } else if (submitButton.attachEvent) {
+		submitButton.attachEvent("onclick", convert);
+	      }
+		document.getElementById('value').value="";
+		document.getElementById('sqRoot').innerHTML="";
+	      }
+
+	      if (window.addEventListener){
+		window.addEventListener("load", createEventListener, false);
+
+	      } else if (window.attachEvent){
+		window.attachEvent("onload", createEventListener);
+	}
+   </script>
+
+	<div id ="footer">
+		<small><i>Website created by Steven Dykee</i></small><br />
+		<small><i>Copyright &copy; 2016 MICA Team and Sunborn</i></small><br />
+		<a href="steven@dykee.com"><small><i>steven@dykee.com</i></small></a>
+		
+	</div>
+</div></body>
+</html>
